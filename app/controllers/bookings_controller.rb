@@ -9,23 +9,27 @@ class BookingsController < ApplicationController
   end
 
   def new
-    @booking = Booking.new
+    @user = set_user
+    @car = set_car
+    @booking = Booking.new(booking_params)
   end
 
   def create
+    @user = set_user
+    @car = set_car
     @booking = Booking.new(booking_params)
     @booking.save
   end
 
   def edit
-    @task = Task.find(params[:id])
+    @booking = Booking.find(params[:id])
     # May not be suitable due to update on card plans
   end
 
   def update
     @booking = Booking.find(params[:id])
     @booking.update(booking_params)
-    redirect_to # booking card if needed
+    #
   end
 
   def destroy
@@ -37,6 +41,14 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:user, :car)
+    params.require(:booking).permit(:user_id, :car_id)
+  end
+
+  def set_user
+    @user = User.find(params[:user_id])
+  end
+
+  def set_car
+    @car = Car.find(params[:car_id])
   end
 end
