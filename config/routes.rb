@@ -4,5 +4,4 @@ Rails.application.routes.draw do
     resources :cars do
       resources :bookings
   end
-  resources :cars, except: [:index]
 end
