@@ -1,5 +1,8 @@
 class User < ApplicationRecord
 
+   devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
+  
   has_many bookings
   has_many cars
 
@@ -40,5 +43,4 @@ class User < ApplicationRecord
   validates :phone,:presence => true,
    :numericality => true,
     :length => { :minimum => 10, :maximum => 15 }
-
 end
