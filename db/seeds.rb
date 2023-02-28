@@ -17,6 +17,7 @@ user.save!
     colour: Faker::Vehicle.color,
     user_id: user.id
   )
+  vehicle.photo.attach(io:File.open('app/assets/images/db5.png'), filename: 'db5.png', content_type: 'image/png')
   vehicle.save!
 
 end
