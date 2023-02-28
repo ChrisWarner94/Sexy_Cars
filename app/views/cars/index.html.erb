@@ -3,11 +3,12 @@
     <h1>Book your favourite cars!!</h1>
     <%= link_to "Book a car now!", class: "btn btn-flat" %>
   </div>
+  </div>
 <div class="cards">
   <% @cars.each do |car| %>
     <div class="card-category">
-      <%= car.model  %>
-      <%= cl_image_tag car.photo.key, height: 300, width: 400, crop: :fill  %>
+      <%= link_to car.model  %>
+      <%= car.photo.key  %>
     </div>
   <%end  %>
 </div>
