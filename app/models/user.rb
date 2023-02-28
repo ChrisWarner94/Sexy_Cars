@@ -10,11 +10,11 @@ class User < ApplicationRecord
 
   # validates :first_name, :last_name, presence: :true
 
-  #VALIDATES EMAIL
+#   #VALIDATES EMAIL
 
   # validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
 
-  # PASSWORD VALIDATION
+#   # PASSWORD VALIDATION
 
 #   PASSWORD_FORMAT = /\A
 #   (?=.{8,})          # Must contain 8 or more characters
@@ -37,5 +37,13 @@ class User < ApplicationRecord
 #   format: { with: PASSWORD_FORMAT },
 #   confirmation: true,
 #   on: :update
+
+
+#   # PHONE NUMBER VALIDATION
+
+#   validates :phone,:presence => true,
+#    :numericality => true,
+#     :length => { :minimum => 10, :maximum => 15 }
+
 
 end

@@ -1,6 +1,6 @@
 class CarsController < ApplicationController
 
-  skip_before_action :authenticate_user!, only: :index
+  #skip_before_action :authenticate_user!, only: :index
   def index
     @cars = Car.all
   end
@@ -11,7 +11,7 @@ class CarsController < ApplicationController
   end
 
   def new
-    @user = User.find(params[:user_id])
+    @user = current_user
     @car = Car.new
   end
 
