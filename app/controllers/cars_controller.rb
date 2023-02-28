@@ -1,18 +1,17 @@
 class CarsController < ApplicationController
-
-  skip_before_action :authenticate_user!, only: :index
+  skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     @cars = Car.all
   end
 
   def show
-    @user = User.find(params[:user_id])
+    # @user = User.find(params[:user_id])
     @cars = Car.find(params[:id])
   end
 
   def new
-    @user = User.find(params[:user_id])
     @car = Car.new
+    @user = User.find(params[:user_id])
   end
 
   def create
@@ -36,5 +35,9 @@ class CarsController < ApplicationController
 
   def car_params
     params.require(:car).permit(:model, :number_of_seats, :fuel_type, :colour, :photo, :user_id)
+  end
+
+  def set_car
+    @car = Car.find(params[:car_id])
   end
 end
