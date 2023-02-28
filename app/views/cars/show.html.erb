@@ -1,0 +1,8 @@
+<div>
+<p><%= @car.photo %></p>
+  <h2><%= @car.name %></h2>
+  <p><%= @car.price %></p>
+  <p><%= @car.text %></p>
+<%= link_to "delete this list", car_path(@car), class: "btn btn-cancel", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this list?" } %>
+
+</div>
