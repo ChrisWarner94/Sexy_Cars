@@ -1,5 +1,9 @@
 require 'faker'
 
+# puts "Cleaning up database"
+# User.destroy_all
+# Car.destroy_all
+# puts "Done"
 
 user = User.new(
   first_name: "Chris",
@@ -8,6 +12,7 @@ user = User.new(
   password: "password123"
 )
 user.save!
+puts "User created"
 
 100.times do
   vehicle = Car.new(
@@ -17,6 +22,9 @@ user.save!
     colour: Faker::Vehicle.color,
     user_id: user.id
   )
+  vehicle.photo.attach(io: File.open('app/assets/images/db5.png'), filename: 'db5.png', content_type: 'image/png')
   vehicle.save!
+
+  puts "Car #{vehicle.id} created"
 
 end
