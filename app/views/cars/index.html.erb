@@ -4,11 +4,12 @@
     <%= link_to "Book a car now!", class: "btn btn-flat" %>
     </div>
   </div>
+  </div>
 <div class="cards">
   <% @cars.each do |car| %>
     <div class="card-category">
       <%= link_to car.model  %>
-      <%= car.photo.key %>
+      <%= car.photo.key  %>
     </div>
   <%end  %>
 </div>
