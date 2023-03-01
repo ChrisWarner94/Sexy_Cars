@@ -1,4 +1,3 @@
-<div>
 <% if @car.photo.attached? %>
      <div class="image"> <%= cl_image_tag @car.photo.key, height: 300, width: 400, crop: :fill %> </div>
 <% end %>
@@ -8,5 +7,4 @@
       <p><strong>Fuel Type:</strong> <%= @car.fuel_type %></p>
  </div>
   <h2><%= @car.model %></h2>
-<%= link_to "delete this list", car_path(@car), class: "btn btn-cancel", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this list?" } %>
 <%= link_to "Book", new_car_booking_path(@car)  %>
