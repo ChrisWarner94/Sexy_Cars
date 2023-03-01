@@ -6,13 +6,13 @@ class User < ApplicationRecord
   # has_many :bookings
   # has_many :cars
 
-  # # FIRST_NAME & LAST_NAME VALIDATES PRESESNCE TRUE
+#   # FIRST_NAME & LAST_NAME VALIDATES PRESESNCE TRUE
 
-  # validates :first_name, :last_name, presence: :true
+#   validates :first_name, :last_name, presence: :true
 
 #   #VALIDATES EMAIL
 
-  # validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
+#   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
 
 #   # PASSWORD VALIDATION
 
@@ -37,5 +37,11 @@ class User < ApplicationRecord
 #   format: { with: PASSWORD_FORMAT },
 #   confirmation: true,
 #   on: :update
+
+#   # PHONE NUMBER VALIDATION
+
+#   validates :phone,:presence => true,
+#    :numericality => true,
+#     :length => { :minimum => 10, :maximum => 15 }
 
 end
