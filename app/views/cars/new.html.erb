@@ -1,19 +1,13 @@
- <!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" href="new_car.css">
-</head>
-<body>
-
 <div class="container">
-<h1 >Add a new Car<h1>
-
-<%= simple_form_for(@car) do |f| %>
-  <%= f.input :model %>
-  <%= f.input :colour %>
-  <%= f.input :fuel_type, :collection => ['Electric', 'Hybrid', 'Petrol', 'Diesel'] %>
-  <%= f.input :number_of_seats, :collection => ['2', '5', '7'] %>
-  <%= f.button :submit %>
-<% end %>
-</body>
-</html>
+<h2 class="text-center">Add a new Car</h2>
+  <div class="mx-auto w-50" >
+    <%= simple_form_for(@car) do |f| %>
+      <%= f.input :model %>
+      <%= f.input :colour %>
+      <%= f.input :fuel_type, :collection => ['Electric', 'Hybrid', 'Petrol', 'Diesel'] %>
+      <%= f.input :number_of_seats, :collection => ['2', '5', '7'] %>
+      <%= f.input :photo, as: :file %>
+      <%= f.button :submit, class: "btn-primary" %>
+    <% end %>
+  </div>
+</div>
