@@ -14,7 +14,7 @@ user = User.new(
 user.save!
 puts "User created"
 
-100.times do
+5.times do
   vehicle = Car.new(
     number_of_seats: ["2", "5", "7"].sample,
     model: Faker::Vehicle.make_and_model,
