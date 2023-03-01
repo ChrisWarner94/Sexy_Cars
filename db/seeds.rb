@@ -1,4 +1,7 @@
 require 'faker'
+require "open-uri"
+
+
 
 # puts "Cleaning up database"
 # User.destroy_all
