@@ -1,3 +1,4 @@
+<div class="container mx-auto w-50">
 <% if @car.photo.attached? %>
      <div class="image"> <%= cl_image_tag @car.photo.key, height: 300, width: 400, crop: :fill %> </div>
 <% end %>
@@ -5,6 +6,8 @@
       <p><strong>Number of Seats:</strong> <%= @car.number_of_seats %></p>
       <p><strong>Color:</strong> <%= @car.colour %></p>
       <p><strong>Fuel Type:</strong> <%= @car.fuel_type %></p>
- </div>
+
   <h2><%= @car.model %></h2>
 <%= link_to "Book", new_car_booking_path(@car)  %>
+</div>
+ </div>
