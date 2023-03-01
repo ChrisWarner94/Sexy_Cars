@@ -5,11 +5,11 @@ class BookingsController < ApplicationController
   end
 
   def show
-    @booking = @booking.find(params[:id])
+    @car = set_car
+    @booking = Booking.find(params[:id])
   end
 
   def new
-    @user = set_user
     @car = set_car
     @booking = Booking.new(booking_params)
   end

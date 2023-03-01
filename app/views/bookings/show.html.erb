@@ -1,0 +1,9 @@
+<h1><%= @booking.car.model %></h1>
+<h2>Your booked car details</h2>
+<div> <%= cl_image_tag @booking.car.photo.key, height: 300, width: 600, crop: :fit %></div>
+<div>
+  <li> Model: <%= @booking.car.model %> </li>
+  <li> Colour: <%= @booking.car.colour %> </li>
+  <li> Fuel type: <%= @booking.car.fuel_type %> </li>
+  <%= link_to "See all your bookings", car_bookings_path %>
+</div>
