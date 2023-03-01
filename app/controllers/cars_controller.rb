@@ -11,8 +11,8 @@ class CarsController < ApplicationController
   end
 
   def new
+    @user = current_user
     @car = Car.new
-    @user = User.find(params[:user_id])
   end
 
   def create
