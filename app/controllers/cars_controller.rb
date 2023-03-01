@@ -7,7 +7,7 @@ class CarsController < ApplicationController
 
   def show
     # @user = User.find(params[:user_id])
-    @cars = Car.find(params[:id])
+    @car = Car.find(params[:id])
   end
 
   def new
