@@ -4,4 +4,6 @@ Rails.application.routes.draw do
     resources :cars do
       resources :bookings
   end
+
+  resources :users, only: %i[index show]
 end
