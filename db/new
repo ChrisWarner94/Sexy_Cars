@@ -1,0 +1,9 @@
+
+  <%= simple_form_for [@car, @booking] do |f| %>
+
+    <%= f.input :user_id %>
+    <%= f.input :car_id %>
+    <%= f.input :pickup_date %>
+    <%= f.input :return_date %>
+    <%= f.submit %>
+  <% end %>
