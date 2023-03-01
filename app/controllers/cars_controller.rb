@@ -6,20 +6,22 @@ class CarsController < ApplicationController
   end
 
   def show
-    # @user = User.find(params[:user_id])
-    @cars = Car.find(params[:id])
+    @user = current_user
+    @car = Car.find(params[:id])
   end
 
   def new
-    @user = current_user
     @car = Car.new
   end
 
   def create
-    @user = User.find(params[:user_id])
     @car = Car.new(car_params)
-    @car.save
+    @car.user = current_user
+    if @car.save
     redirect_to car_path(@car)
+    else
+      render :new , status: :unprocessable_entity
+    end
   end
 
   def edit
