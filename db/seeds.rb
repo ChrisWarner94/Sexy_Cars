@@ -8,7 +8,7 @@ require 'faker'
 user = User.new(
   first_name: "Chris",
   last_name: "Warner",
-  email: "c.warner15@gmail.com",
+  email: "c.warner155@gmail.com",
   password: "password123"
 )
 user.save!
