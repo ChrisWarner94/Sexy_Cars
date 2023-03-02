@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @users = User.find(params[:id])
   end
 
   def create
@@ -18,7 +18,6 @@ class UsersController < ApplicationController
   # def edit
   #   @users = User.find(params[:id])
   # end
-
 
   def destroy
     #button on view
