@@ -52,8 +52,9 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  
   margin-bottom: 10px;
+  background:url('app/assets/videos/car.mp4') repeat;
 }
 
 .banner h1 {
@@ -77,6 +78,8 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
 }
+
+
 
 // Smallest device
 // @media (min-width: 100px) and (max-width: 575px) {
@@ -128,6 +131,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
+<<<<<<< HEAD
 .container{
   margin: 50px
 }
@@ -135,4 +139,28 @@
 .home-img {
   height: 400px;
   object-fit: cover;
+=======
+//mp4 styling
+.video-container {
+  height: 300px;
+  width: auto;
+  position: relative;
+}
+//mp4 styling
+.video-container video {
+width: 100%;
+height: 100%;
+position: absolute;
+object-fit: cover;
+z-index: 0;
+}
+
+//mp4 styling
+.video-container .caption {
+z-index: 1;
+position: relative;
+text-align: center;
+color: #dc0000;
+padding: 10px;
+>>>>>>> 1a22a4666b325b3a2a4534ea50bcfd25e4860b2f
 }
