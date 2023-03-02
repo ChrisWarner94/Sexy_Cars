@@ -20,6 +20,7 @@ class BookingsController < ApplicationController
       redirect_to car_path(@car)
     end
   end
+  #"booking"=>{"pickup_date(1i)"=>"2023", "pickup_date(2i)"=>"3", "pickup_date(3i)"=>"2", "return_date(1i)"=>"2023", "return_date(2i)"=>"3", "return_date(3i)"=>"7"},
   def edit
     @booking = Booking.find(params[:id])
     # May not be suitable due to update on card plans
