@@ -183,5 +183,13 @@ h2 {
 }
 
 .search-bar {
-  width: 300px;
+  width: 400px;
+  margin: auto;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.centre-padding-bottom {
+  margin: auto;
+  padding-bottom: 20px;
+  justify-content: center;
 }

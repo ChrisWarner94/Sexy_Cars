@@ -1,15 +1,15 @@
-<div class=container-index>
+<div class="search-bar">
   <h1>Sexy cars to rent!</h1>
 </div>
 <div class="search-bar">
-<%= form_with url: cars_path, method: :get, class: "d-flex" do %>
-  <%= text_field_tag :query,
+  <%= form_with url: cars_path, method: :get, class: "d-flex" do %>
+    <%= text_field_tag :query,
     params[:query],
     class: "form-control",
     placeholder: "Find a car"
   %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
 </div>
 <div class="container-index">
   <div class="cards">
