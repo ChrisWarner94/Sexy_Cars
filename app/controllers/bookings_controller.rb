@@ -11,14 +11,26 @@ class BookingsController < ApplicationController
   def new
     @user = set_user
     @car = set_car
-    @booking = Booking.new(booking_params)
+    @booking = Booking.new
   end
 
   def create
     @user = set_user
     @car = set_car
     @booking = Booking.new(booking_params)
+    @booking.user = @user
+    @booking.car = @car
     @booking.save
+    if @booking.save
+     flash[:notice] = "Your Car is Booked"
+     redirect_to cars_path
+    else
+      render :new, status: :unprocessable_entity
+    end
+
+    if @booking.save
+      flash[:notice] = "Your Car is Booked"
+    end
   end
 
   def edit
@@ -41,11 +53,11 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:user_id, :car_id)
+    params.require(:booking).permit(:pickup_date, :return_date)
   end
 
   def set_user
-    @user = User.find(params[:user_id])
+    @user = current_user
   end
 
   def set_car

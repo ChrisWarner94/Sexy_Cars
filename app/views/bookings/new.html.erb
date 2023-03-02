@@ -1,6 +1,6 @@
+<%= simple_form_for [@car, @booking] do |f| %>
+  <%= f.input :pickup_date %>
+  <%= f.input :return_date %>
+  <%= f.submit 'Book Now',class: "btn btn-success"%>
 
- <%= simple_form_for [@car, @booking] do |f| %> 
-    <%= f.input :pickup_date %>
-    <%= f.input :return_date %>
-    <%= f.submit %>
-  <% end %>
+<% end %>
