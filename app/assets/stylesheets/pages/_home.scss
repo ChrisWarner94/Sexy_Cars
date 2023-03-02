@@ -134,7 +134,11 @@
 }
 
 .container{
+  text-align: center;
   margin-top: 200px;
+}
+
+.containernomarg{
   text-align: center;
 }
 
@@ -172,3 +176,20 @@ padding: 10px;
 h2 {
   font-weight: bold;
 }
+
+.logo {
+  box-sizing: border-box;
+  margin-left: 40px;
+}
+
+.index-centre {
+  width: 400px;
+  margin: auto;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.lpad-50 {
+  margin-left: 50px;
+}
+
