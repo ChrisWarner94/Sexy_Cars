@@ -1,18 +1,24 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dukmyo3cc/image/upload/v1677676636/Hennessey_20Venom_20F5_gtwpq5.jpg);">
-  <div class="container">
-    <h1>Book your favourite cars!</h1>
-    <%= link_to "Rent your car!", new_car_path, class: "btn btn-flat" %>
+
+<div class="banner">
+  <div class="video-container">
+    <%= video_tag "car.mp4", autoplay: true, loop: true %>
+      <div class="caption">
+        <h1>Book your favourite cars!</h1>
+        <%= link_to "Rent your car!", new_car_path, class: "btn btn-flat" %>
+      </div>
   </div>
 </div>
+
 </div>
 <div class="cards">
   <% @cars.each do |car| %>
     <div class="card-product">
+    <% if car.photo.attached? %>
       <%= cl_image_tag car.photo.key, height: 300, width: 600, crop: :fit %>
+    <% end %>
       <div class="card-product-infos">
         <%= link_to car.model, car_path(car), class: "btn btn-flat"  %>
         <%= car.colour %>
       </div>
-    </div>
-  <%end  %>
-</div>
+    <%end  %>
+  </div>
