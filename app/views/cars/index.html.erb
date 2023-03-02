@@ -8,16 +8,17 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="cards">
-    <% @cars.each do |car| %>
-      <div class="card-product">
-        <%= cl_image_tag car.photo.key, height: 300, width: 600, crop: :fit %>
-          <div class="card-product-infos">
-            <%= link_to car.model, car_path(car), class: "btn btn-flat"  %>
-            <%= car.colour %>
-         </div>
-       </div>
-    <%end%>
-  </div>
+</div>
+<div class="cards">
+  <% @cars.each do |car| %>
+    <div class="card-product">
+    <% if car.photo.attached? %>
+      <%= cl_image_tag car.photo.key, height: 300, width: 600, crop: :fit %>
+    <% end %>
+      <div class="card-product-infos">
+        <%= link_to car.model, car_path(car), class: "btn btn-flat"  %>
+        <%= car.colour %>
+      </div>
+    </div>
+  <%end  %>
 </div>
