@@ -1,13 +1,16 @@
-<div class="container mx-auto w-50">
-<% if @car.photo.attached? %>
-     <div class="image"> <%= cl_image_tag @car.photo.key, height: 300, width: 400, crop: :fill %> </div>
-<% end %>
-      <p> <strong>Number of Seats:</strong> <%=@car.model %></p>
+<div class="container">
+    <% if @car.photo.attached? %>
+    <div class="image"> <%= cl_image_tag @car.photo.key, height: 300, width: 400, crop: :fill %> </div>
+   <% end %>
+   </div>
+    <div class="text"> <p> <strong>Number of Seats:</strong> <%=@car.model %></p>
       <p><strong>Number of Seats:</strong> <%= @car.number_of_seats %></p>
       <p><strong>Color:</strong> <%= @car.colour %></p>
       <p><strong>Fuel Type:</strong> <%= @car.fuel_type %></p>
-
-  <h2><%= @car.model %></h2>
-<%= link_to "Book", new_car_booking_path(@car)  %>
-</div>
+      <h3>Stay in the first of these fully autonomous living pods created by inventor Jag Virdie famous for his luxury car designs at Bentley and Maclaren. Described as a ball of molten sunshine dropping from the sky, you'll wonder how the Conker ever got to its mountain top home amongst the swooping Red Kites. This is an all in one escapist, intimate short break featured in George Clarke's Amazing Spaces, Escape to the Country and currently streaming on World's most secret hotels on C4</h3>
+      </div>
  </div>
+  <h2><%= @car.model %></h2>
+
+<%# <%= link_to "delete this list", car_path(@car), class: "btn btn-cancel", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this list?" } %>
+<div><%= link_to "Book", new_car_booking_path(@car)  %></div>
