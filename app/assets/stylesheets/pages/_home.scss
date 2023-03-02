@@ -13,9 +13,9 @@
 }
 
 .card-product img {
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
+  height: 200%;
+  width: 250px;
+  object-fit: contain;
 }
 
 .card-product h2 {
@@ -40,7 +40,7 @@
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
-  background: #670BFF;
+  background: #f23b08;
   // transition: background 0.3s ease;
 }
 
@@ -132,6 +132,16 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
+
+.container{
+  margin: 50px
+}
+
+.home-img {
+  height: 400px;
+  object-fit: cover;
+}
+=======
 //mp4 styling
 .video-container {
   height: 300px;
@@ -155,3 +165,4 @@ text-align: center;
 color: #dc0000;
 padding: 10px;
 }
+
