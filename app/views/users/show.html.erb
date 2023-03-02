@@ -1,5 +1,5 @@
 <div class ="container">
-
+  <%# Greeting %>
   <div class ="text-center my-3">
     <h1>Hello <%= @user.first_name %><%= @user.last_name %></h1>
   </div>
@@ -7,6 +7,8 @@
   <div>
   <h3>Your bookings:</h3>
   </div>
+
+ <%# Bookings %>
 
 <div class="cards">
   <% if @user.bookings.empty? %>
@@ -16,23 +18,20 @@
 
     <div class="card-product">
     <%= cl_image_tag booking.car.photo.key, height: 300, width: 600, crop: :fit %>
-  <div class="card-product-infos">
-    <div>
-      <h2>Car model: <%= booking.car.model %></h2>
-      <p>Colour: <%= booking.car.colour %></p>
-      <p>Fuel type: <%= booking.car.fuel_type %></p>
-      <p>Number of seats: <%= booking.car.number_of_seats %></p>
+    <div class="card-product-infos">
+      <div>
+        <h2>Car model: <%= booking.car.model %></h2>
+        <p><strong>Pickup</strong> date: <%= booking.pickup_date %></p>
+        <p><strong>Return</strong> date: <%= booking.return_date %></p>
+      </div>
+      <h2 class="card-trip-pricing">£99.99</h2>
     </div>
-    <h2 class="card-trip-pricing">£99.99</h2>
-  </div>
 </div>
-
-
-
-
     <% end  %>
   <% end %>
 </div>
+
+<%# Rentals %>
 
 
 </div>
