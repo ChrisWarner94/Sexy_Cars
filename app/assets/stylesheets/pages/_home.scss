@@ -134,7 +134,11 @@
 }
 
 .container{
+  text-align: center;
   margin-top: 200px;
+}
+
+.containernomarg{
   text-align: center;
 }
 
@@ -171,4 +175,13 @@ padding: 10px;
 
 h2 {
   font-weight: bold;
+}
+
+.logo {
+  box-sizing: border-box;
+  margin-left: 40px;
+}
+
+.search-bar {
+  width: 300px;
 }

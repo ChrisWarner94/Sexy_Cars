@@ -1,6 +1,7 @@
-<div class=container>
+<div class=container-index>
   <h1>Sexy cars to rent!</h1>
 </div>
+<div class="search-bar">
 <%= form_with url: cars_path, method: :get, class: "d-flex" do %>
   <%= text_field_tag :query,
     params[:query],
@@ -9,7 +10,8 @@
   %>
   <%= submit_tag "Search", class: "btn btn-primary" %>
 <% end %>
-<div class="container">
+</div>
+<div class="container-index">
   <div class="cards">
     <% @cars.each do |car| %>
       <div class="card-product">
