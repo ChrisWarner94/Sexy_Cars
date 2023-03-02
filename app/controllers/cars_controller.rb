@@ -2,13 +2,18 @@ class CarsController < ApplicationController
 
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
-    @cars = Car.all
+    if params[:query].present?
+      @cars = Car.search_by_model(params[:query])
+    else
+      @cars = Car.all
+    end
+
   end
 
   def show
 
     @user = current_user
-    
+
     @car = Car.find(params[:id])
   end
 
