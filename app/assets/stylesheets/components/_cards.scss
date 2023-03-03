@@ -1,28 +1,30 @@
 
 //CARD PRODUCT
 
-.card-product {
+.card-product-dash {
   overflow: hidden;
-  height: 120px;
+  height: 100px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  border-radius: 3px;
+  margin: 10px 0px;
 }
 
-.card-product img {
+.card-product-dash img {
   height: 100%;
   width: 120px;
-  object-fit: cover;
+  object-fit:cover;
 }
 
-.card-product h2 {
+.card-product-dash h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
-.card-product p {
+.card-product-dash p {
   font-size: 12px;
   line-height: 1.4;
   opacity: .7;
@@ -30,49 +32,50 @@
   margin-top: 8px;
 }
 
-.card-product .card-product-infos {
+.card-product-dash .card-product-infos-dash {
   padding: 16px;
 }
 
 // CARD GIRD
 
-.cards {
+.cards-dash {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  border-radius: 10px;
 }
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
-  .cards {
+  .cards-dash {
     grid-template-columns: 1fr;
   }
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-  .cards {
+  .cards-dash {
     grid-template-columns: 1fr;
   }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-  .cards {
+  .cards-dash {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  .cards {
+  .cards-dash {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-  .cards {
+  .cards-dash {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
