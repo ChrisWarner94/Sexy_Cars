@@ -1,10 +1,10 @@
 <div class="containernomarg">
   <div class="d-flex justify-content-between" >
     <% if @car.photo.attached? %>
-      <div class="image"> <%= cl_image_tag @car.photo.key, height: 500, width: 500, crop: :fit %> </div>
+      <div class="image"> <%= cl_image_tag @car.photo.key, height: 500, width: 600, crop: :fit %> </div>
     <% end %>
     <div class="text">
-      <p> <strong>Model:</strong> <%=@car.model %></p>
+      <p> <strong>Model:</strong> <%=@car.model %> <div class="text_move"><strong>Price:</strong> <%=@car.price %></div></p>
       <p><strong>Number of Seats:</strong> <%= @car.number_of_seats %></p>
       <p><strong>Color:</strong> <%= @car.colour %></p>
       <p><strong>Fuel Type:</strong> <%= @car.fuel_type %></p>
