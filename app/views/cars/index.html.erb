@@ -11,14 +11,16 @@
     <%= submit_tag "Search", class: "btn btn-primary" %>
   <% end %>
 </div>
-<div class="container-index">
-  <div class="cards">
-    <% @cars.each do |car| %>
-      <div class="card-product">
-        <%= cl_image_tag car.photo.key, height: 300, width: 600, crop: :fit %>
-        <div class="card-product-infos">
-          <h2> <%= link_to car.model, car_path(car), class: "" %> </h2>
+<div class="cards">
+  <% @cars.each do |car| %>
+    <div class="card-test" >
+      <%= link_to car_path(car) do %>
+        <div class="card__image"> <%= cl_image_tag car.photo.key, crop: :fit%> </div>
+        <div class="card__title">
+          <h2> <%= car.model  %> </h2>
         </div>
+        <button class="btn"><%= link_to "Book!", car_path(car), class: "btn btn-primary" %></button>
       </div>
-    <%end  %>
-  </div>
+    <% end %>
+  <%end  %>
+</div>
