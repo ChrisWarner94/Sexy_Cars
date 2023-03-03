@@ -32,7 +32,7 @@
   margin-top: 8px;
 }
 
-.card-product .card-product-infos {
+.card-product .card-product-infos-dash {
   padding: 16px;
   text-align: center;
 }
@@ -190,7 +190,7 @@ h2 {
 
 .logo {
   box-sizing: border-box;
-  margin-left: 150px;
+
 }
 
 .index-centre {
@@ -207,7 +207,6 @@ h2 {
 .nav-options {
   display: inline;
 }
-
 
 
 
@@ -321,4 +320,16 @@ a:link {
   font-size: 0.875rem;
   line-height: 1.5;
   margin-bottom: 1.25rem;
+
+.form-container{
+  display: flex;
+  margin: 50px;
+}
+
+.termcon{
+margin-right: 150px;
+}
+
+.book-tick-box{
+
 }

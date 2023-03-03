@@ -1,6 +1,33 @@
+<div class="form-container d-flex flex-column" style="justify-content: space-between;">
+  <div class="d-flex">
+    <div class="form padding-right" style="margin-left: 20px">
+      <%= simple_form_for [@car, @booking] do |f| %>
+        <%= f.input :pickup_date, as: :date, html5: true %>
+        <%= f.input :return_date, as: :date, html5: true %>
+        <div class="btn btn-danger" style="padding-left: 10px; width:200px;">
+        <%= f.submit "   Book Now   "%>
+        </div>
+      <% end %>
+    </div>
+    <div style="margin-left: 50px">
+      <%= cl_image_tag @car.photo.key, height: 300, width: 400, crop: :fit %>
+    </div>
+    <div style="height: 150px; width:420px; border:1px solid #ccc; overflow:auto; margin-left:50px">
+      1. Rental Agreement: This Rental Agreement is a legally binding agreement between the Customer (“Customer”) and the Car Rental Company (“Sexy Cars plc”). By submitting a reservation request, Customer agrees to be bound by these terms and conditions.<br>
+      <br>
+      2. Vehicle Rental Period: The rental period begins on the date and time the vehicle is picked up and ends on the date and time the vehicle is returned to the Sexy Cars plc. Late returns are subject to additional fees.<br>
+      <br>
+      3. Vehicle Usage: The vehicle is for the sole use of Customer and shall not be used for any commercial purpose. The vehicle shall not be used for any illegal activity nor shall it be used for towing, racing, or any other purpose not intended by the manufacturer. <br>
+      <br>
+      4. Insurance: Customer is responsible for obtaining and maintaining valid insurance coverage while the vehicle is in their possession. <br>
+      <br>
+      5. Damage: The Customer is responsible for any damages caused to the vehicle while it is in their possession. The Customer shall bear the full cost of repair for any damages caused to the vehicle. <br>
+      <br>
+      6. Cancellations: Cancellation of a reservation must be made at least 24 hours prior to the start of the rental period. Cancellations made within 24 hours of the start of the rental period are subject to a cancellation fee. <br>
+      <br>
+      <a style="font-size: 25px;">“I agree to the terms and conditions as set out by the user agreement.” </a><input type="checkbox" class="book-tick-box" style="width: 30px; height: 30px;">
+    </div>
 
- <%= simple_form_for [@car, @booking] do |f| %> 
-    <%= f.input :pickup_date %>
-    <%= f.input :return_date %>
-    <%= f.submit %>
-  <% end %>
+  </div>
+
+</div>
