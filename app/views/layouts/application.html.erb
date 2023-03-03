@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <title>SexyCars</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+      <title>SexyCars</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <%= csrf_meta_tags %>
+      <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-  </head>
+      <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+      <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    </head>
 
-  <body>
-   <%= render "shared/navbar" %>
-   <%= render "shared/flashes" %>
+    <body>
 
+    <%= render "shared/navbar" %>
+    <%= render "shared/flashes" %>
+    <div style="min-height:calc(100vh - 174.38px)">
     <%= yield %>
-  </body>
-  <footer>
-   <%= render "shared/footer" %></footer>
+    </div>
+
+    <footer>
+    <%= render "shared/footer" %>
+    </footer>
+    </body>
+
+
+
+
 </html>
